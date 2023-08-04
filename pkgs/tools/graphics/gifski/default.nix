@@ -36,7 +36,7 @@ rustPlatform.buildRustPackage rec {
   buildFeatures = [ "video" ];
 
   # error: the crate `gifski` is compiled with the panic strategy `abort` which is incompatible with this crate's strategy of `unwind`
-  doCheck = !stdenv.isDarwin;
+  doCheck = false;
 
   # error: linker `/usr/bin/x86_64-linux-gnu-gcc` not found
   postPatch = ''
